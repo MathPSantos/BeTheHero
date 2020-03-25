@@ -22,6 +22,6 @@ module.exports = {
             uf,
         });
 
-        return response.json(); F
+        return response.json({id});
     }
 };
