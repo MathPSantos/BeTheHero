@@ -47,18 +47,18 @@ export default function Register() {
                 <section>
                     <img src={logoImg} alt="Be The Hero"/>
 
-                    <h1>Cadastro</h1>   
-                    <p>Faça seu cadastro, entre na plataforma e ajuda pessoas a encontrarem os casos da sua ONG.</p>
+                    <h1>Sign up!</h1>   
+                    <p>Sign up and help people to find your NGOs incidents.</p>
 
                     <Link className="back-link" to="/">
                         <FiArrowLeft size={16} color="#E02041" />
-                        Tenho cadastro
+                        Already have an account? Sign in
                     </Link>
                 </section>
 
                 <form onSubmit={handleRegister}>
                     <input
-                        placeholder="Nome da ONG"
+                        placeholder="NGO Name"
                         value={name}
                         onChange={e => setName(e.target.value)}
                     />
@@ -77,12 +77,12 @@ export default function Register() {
 
                     <div className="input-group">
                         <input
-                            placeholder="Cidade"
+                            placeholder="City"
                             value={city}
                             onChange={e => setCity(e.target.value)}
                         />
                         <input 
-                            placeholder="UF" 
+                            placeholder="State ABB" 
                             style={{ width: 80 }}
                             value={uf}
                             onChange={e => setUf(e.target.value)}
@@ -90,7 +90,7 @@ export default function Register() {
                     </div>
 
                     <button className="button" type="submit">
-                        Cadastrar
+                        Sign up
                     </button>
                 </form>
             </div>
