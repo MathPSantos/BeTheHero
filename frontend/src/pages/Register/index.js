@@ -83,7 +83,7 @@ export default function Register() {
                         />
                         <input 
                             placeholder="State ABB" 
-                            style={{ width: 80 }}
+                            style={{ width: 120 }}
                             value={uf}
                             onChange={e => setUf(e.target.value)}
                         />
