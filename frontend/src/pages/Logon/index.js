@@ -49,7 +49,7 @@ export default function Logon() {
                     </Link>
                 </form>
             </section>
-            <img src={herosImg} alt="Heroes"/>
+            <img className='heroesImg' src={herosImg} alt="Heroes"/>
         </div>
     );
 }

@@ -1,9 +1,9 @@
 .logon-container {
+    position: relative;
     width: 100%;
     max-width: 1120px;
     height: 100vh;
     margin: 0 auto;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -24,3 +24,50 @@
     margin-bottom: 32px;
 }
 
+@media only screen and (max-width: 1125px) {
+    .logon-container {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .logon-container {
+        flex-direction: column;
+        max-width: 550px;
+    }
+    .logon-container section.form, .logon-container section.form form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin: auto 30px;
+        max-width: 550px;
+    }
+    .logon-container section.form form {
+        width: 100%;
+    }
+    .logon-container section.form form h1 {
+        text-align: center;
+        margin-top: 50px;
+    }
+    .logon-container .heroesImg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        width: 90%;
+        opacity: .2;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .logon-container section.form img {
+        width: 60%;
+    }
+
+    .logon-container section.form form h1 {
+        font-size: 25px;
+    }
+}
