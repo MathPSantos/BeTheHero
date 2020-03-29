@@ -6,6 +6,7 @@ import api from '../../services/api';
 import "./styles.css";
 
 import logoImg from '../../assets/logo.svg'
+import logoImg1 from '../../assets/logo2.svg'
 
 export default function Profile() {
     const [incidents, setIncidents] = useState([]);
@@ -25,7 +26,7 @@ export default function Profile() {
         })
     }, [ongId]);
 
-    async function handleDeleteIncident (id) {
+    async function handleDeleteIncident(id) {
         try {
             await api.delete(`incidents/${id}`, {
                 headers: {
@@ -33,13 +34,13 @@ export default function Profile() {
                 }
             });
 
-            setIncidents(incidents.filter(incident => incident.id !==  id));
+            setIncidents(incidents.filter(incident => incident.id !== id));
         } catch (err) {
             alert('Erro ao deletar caso, tente novamente!')
         }
     }
 
-    function handleLogout () {
+    function handleLogout() {
         localStorage.clear();
 
         history.push('/');
@@ -48,14 +49,14 @@ export default function Profile() {
     return (
         <div className="profile-container">
             <header>
-                <img src={logoImg} alt="Be The Hero" />
+                <img className='logoImg1' src={logoImg} alt="Be The Hero" />
+                <img className='logoImg2' src={logoImg1} alt="Be The Hero" />
                 <span>Welcome, {ongName}</span>
 
-                <Link className="button" to="/incidents/new">
-                    Add new incident
-                </Link>
+                <Link className="newIncident button" to="/incidents/new" />
+
                 <button onClick={handleLogout} type="button">
-                    <FiPower size={18} color="#E02041" />
+                    <FiPower size={22} color="#E02041" />
                 </button>
             </header>
             <h1>Current Incidents</h1>

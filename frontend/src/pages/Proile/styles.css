@@ -15,28 +15,48 @@
     margin-left: 24px;
 }
 
-.profile-container header img {
+.profile-container header img.logoImg1 {
     height: 64px;
+}
+
+.profile-container header img.logoImg2 {
+    display: none;
 }
 
 .profile-container header a {
     width: 260px;
     margin-left: auto;
     margin-top: 0;
+    position: relative;
+}
+
+.profile-container header a.newIncident::before {
+    width: 100%;
+    height: 100%;
+    content: 'Add new incident';
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-container header button {
-    width: 60px;
-    height: 60px;
+    width: 22px;
+    height: 22px;
     border-radius: 4px;
-    border: 1px solid #dcdce6;
     background: transparent;
-    margin-left: 16px;
-    transition: border-color 0.2s;
+    margin-left: 30px;
+    border: none;
+    transition: filter .2s;
 }
 
-.profile-container header button:hover{
-    border-color: #999;
+.profile-container header button:hover {
+    filter: brightness(1.2);
 }
 
 .profile-container h1 {
@@ -85,4 +105,63 @@
     color: #737380;
     line-height: 21px;
     font-size: 16px;
+}
+
+@media only screen and (max-width: 800px) {
+    .profile-container header img.logoImg1 {
+        height: 50px;
+    }
+
+    .profile-container header a.newIncident {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .profile-container header a.newIncident::before {
+        content: '+';
+        font-size: 30px;
+        font-weight: 300;
+    }
+
+    .profile-container ul {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 24px;
+        list-style: none;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .profile-container header span {
+        font-size: 16px;
+    }
+
+    .profile-container header a.newIncident {
+        width: 50px;
+        height: 50px;
+    }
+
+    .profile-container header a.newIncident::before {
+        font-size: 25px;
+    }
+
+    .profile-container header img.logoImg1 {
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .profile-container header img.logoImg1 {
+        display: none;
+    }
+
+    .profile-container header img.logoImg2 {
+        display: block;
+        height: 40px;
+    }
+
+    .profile-container header button {
+        margin-left: 10px;
+    }
 }
