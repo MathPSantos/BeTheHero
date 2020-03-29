@@ -10,7 +10,12 @@
   > This project was made for learning purposes and comes from Rocketseat's Omnistack Week crash course #11
 </p>
 
-  <h1 align="center">Technologies used</h1>
+<h1 align="center">Technologies</h1>
 <p align="center">
   <img src=".github/techs.png" width="600px"/>
+</p>
+
+  <h1 align="center">Screens</h1>
+<p align="center">
+  <img src=".github/screens.png" width="1000px"/>
 </p>
