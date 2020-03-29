@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-.profile-container header span{
+.profile-container header span {
     font-size: 20px;
     margin-left: 24px;
 }
@@ -39,7 +39,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,7 +86,7 @@
     transition: filter 0.2s;
 }
 
-.profile-container ul li button:hover{
+.profile-container ul li button:hover {
     opacity: 0.8;
 }
 
@@ -97,7 +96,7 @@
     color: #41414b;
 }
 
-.profile-container ul li p + strong {
+.profile-container ul li p+strong {
     margin-top: 32px;
 }
 
@@ -111,19 +110,16 @@
     .profile-container header img.logoImg1 {
         height: 50px;
     }
-
     .profile-container header a.newIncident {
         width: 60px;
         height: 60px;
         border-radius: 50%;
     }
-
     .profile-container header a.newIncident::before {
         content: '+';
         font-size: 30px;
         font-weight: 300;
     }
-
     .profile-container ul {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -136,16 +132,13 @@
     .profile-container header span {
         font-size: 16px;
     }
-
     .profile-container header a.newIncident {
         width: 50px;
         height: 50px;
     }
-
     .profile-container header a.newIncident::before {
         font-size: 25px;
     }
-
     .profile-container header img.logoImg1 {
         height: 40px;
     }
@@ -155,12 +148,10 @@
     .profile-container header img.logoImg1 {
         display: none;
     }
-
     .profile-container header img.logoImg2 {
         display: block;
         height: 40px;
     }
-
     .profile-container header button {
         margin-left: 10px;
     }

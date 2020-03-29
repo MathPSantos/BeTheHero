@@ -46,3 +46,41 @@
 .new-incident-container .content form textarea {
     margin-top: 8px;
 }
+
+@media only screen and (max-width: 1125px) {
+    .new-incident-container {
+        margin: 60px 0;
+    }
+
+    .new-incident-container .content {
+        box-shadow: none;
+        flex-direction: column;
+
+        padding: 30px;
+    }
+
+    .new-incident-container .content section {
+        padding: 30px 0;
+        max-width: 550px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .new-incident-container .content section img {
+        width: 60%;
+    }
+
+    .new-incident-container .content section h1 {
+        font-size: 28px;
+    }
+
+    .new-incident-container.content section p {
+        text-align: center;
+        font-size: 16px;
+    }
+}
