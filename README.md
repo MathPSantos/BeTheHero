@@ -19,3 +19,22 @@
 <p align="center">
   <img src=".github/screens.png" width="1000px"/>
 </p>
+
+# Development setup
+
+> yarn is required
+
+After cloning this repo:
+### Backend
+  - Run ```npm install``` in the ```backend``` folder
+  - Run ```yarn dev``` to up the server
+  - Open ```Insomnia``` or ```Postman``` and import the ```Insomnia.json``` workspace file at ```backend``` folder
+### Frontend
+  - Run ```npm install``` in the ```website``` folder
+  - Run ```npm start``` to up the project
+### Mobile
+  - Run ```npm install``` in the ```mobile``` folder
+  - Run ```npm start``` to up the project
+
+# License
+[MIT License](/LICENSE)
