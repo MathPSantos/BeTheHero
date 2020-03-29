@@ -10,6 +10,7 @@ import logoImg1 from '../../assets/logo2.svg'
 
 export default function Profile() {
     const [incidents, setIncidents] = useState([]);
+    const [hoverColor, setHoverColor] = useState('a8a8b3');
 
     const history = useHistory();
 
@@ -25,6 +26,14 @@ export default function Profile() {
             setIncidents(response.data);
         })
     }, [ongId]);
+
+    function hoverChangeColor() {
+        setHoverColor('#E02041');
+    }
+
+    function hoverReturnColor() {
+        setHoverColor('a8a8b3');
+    }
 
     async function handleDeleteIncident(id) {
         try {
@@ -73,8 +82,8 @@ export default function Profile() {
                         <strong>VALUE:</strong>
                         <p>{Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(incident.value)}</p>
 
-                        <button onClick={() => handleDeleteIncident(incident.id)} type="button">
-                            <FiTrash2 size={20} color="a8a8b3" />
+                        <button onClick={() => handleDeleteIncident(incident.id)} type="button" onMouseOver={hoverChangeColor} onMouseOut={hoverReturnColor}>
+                            <FiTrash2 size={20} color={hoverColor} style={{ transition: "all .2s"}} />
                         </button>
                     </li>
                 ))}
