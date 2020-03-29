@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useFields } from '../../hooks/useFields';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 
@@ -7,35 +8,32 @@ import "./styles.css";
 
 import logoImg from '../../assets/logo.svg'
 
-export default function NewIncident() {
-    const [title, setTitle] = useState('');
-    const [description, setDescription] = useState('');
-    const [value, setValue] = useState('');
+export default function EditIncident({ location }) {
+    const [fields, setFields] = useFields({ ...location.state.incident })
 
     const history = useHistory()
 
     const ongId = localStorage.getItem('ongId');
 
-    async function handleNewIncident(e) {
+    async function handleEditIncident(e) {
         e.preventDefault();
-
-        const data = {
-            title,
-            description,
-            value,
-        }
-
+        
         try {
-            await api.post('incidents', data, {
+            await api.put(`incidents/${fields.id}`, fields, {
                 headers: {
                     Authorization: ongId,
                 }
-            });
+            })
 
-            history.push('/profile');
+            history.push('/profile')
+
         } catch (err) {
-            alert('Erro ao cadastrar caso, tente novamente!')
+            alert(err)
         }
+    }
+
+    function updateFields({ target }) {
+        setFields(target)
     }
 
     return (
@@ -44,7 +42,7 @@ export default function NewIncident() {
                 <section>
                     <img src={logoImg} alt="Be The Hero" />
 
-                    <h1>Add new incident</h1>
+                    <h1>Edit incident</h1>
                     <p>Descrie the incident in detail to find a hero to solve it!</p>
 
                     <Link className="back-link" to="/profile">
@@ -53,25 +51,34 @@ export default function NewIncident() {
                     </Link>
                 </section>
 
-                <form onSubmit={handleNewIncident}>
+                <form onSubmit={handleEditIncident}>
                     <input
+                        name="title"
+                        type="text"
                         placeholder="Incident title"
-                        value={title}
-                        onChange={e => setTitle(e.target.value)}
+                        value={fields.title}
+                        onChange={updateFields}
+                        required
                     />
                     <textarea
+                        name="description"
+                        type="text"
                         placeholder="Description"
-                        value={description}
-                        onChange={e => setDescription(e.target.value)}
+                        value={fields.description}
+                        onChange={updateFields}
+                        required
                     />
                     <input
+                        name="value"
+                        type="text"
                         placeholder="Value"
-                        value={value}
-                        onChange={e => setValue(e.target.value)}
+                        value={fields.value}
+                        onChange={updateFields}
+                        required
                     />
 
                     <button className="button" type="submit">
-                        Add new incident
+                        Edit incident
                     </button>
                 </form>
             </div>

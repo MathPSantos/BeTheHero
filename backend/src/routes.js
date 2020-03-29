@@ -14,6 +14,8 @@ routes.post('/sessions', celebrate({
     }),
 }), SessionController.create);
 
+/** */
+
 routes.get('/ongs', OngController.index);
 
 routes.post('/ongs', celebrate({
@@ -26,11 +28,15 @@ routes.post('/ongs', celebrate({
     }),
 }), OngController.create);
 
+/** */
+
 routes.get('/profile', celebrate({
     [Segments.HEADERS]: Joi.object({
         authorization: Joi.string().required(),
     }).unknown(),
 }), ProfileController.index);
+
+/** */
 
 routes.get('/incidents', celebrate({
     [Segments.QUERY]: Joi.object().keys({
@@ -48,6 +54,12 @@ routes.post('/incidents', celebrate({
         value: Joi.number().required().min(1),
     }),
 }), IncidentController.create);
+
+routes.put('/incidents/:id', celebrate({
+    [Segments.PARAMS]: Joi.object().keys({
+        id: Joi.number().required()
+    }),
+}), IncidentController.update);
 
 routes.delete('/incidents/:id', celebrate({
     [Segments.PARAMS]: Joi.object().keys({

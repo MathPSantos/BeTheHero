@@ -77,17 +77,36 @@
     position: relative;
 }
 
-.profile-container ul li button {
+.profile-container ul li .actions {
+    width: 55px;
+    
     position: absolute;
     right: 24px;
     top: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.profile-container ul li .actions button {
     border: 0;
     background: transparent;
     transition: filter 0.2s;
 }
 
-.profile-container ul li button:hover {
+.profile-container ul li .actions button:hover {
     opacity: 0.8;
+}
+
+.profile-container ul li .actions button .icon {
+    color: #A8A8B3;
+    transition: all .2s;
+}
+
+.profile-container ul li .actions button .icon:hover {
+    color: #E02041;
 }
 
 .profile-container ul li strong {

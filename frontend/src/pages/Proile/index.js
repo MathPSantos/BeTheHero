@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { FiPower, FiTrash2 } from 'react-icons/fi';
+import { FiPower, FiTrash2, FiEdit } from 'react-icons/fi';
 
 import api from '../../services/api';
 import "./styles.css";
@@ -27,12 +27,13 @@ export default function Profile() {
         })
     }, [ongId]);
 
-    function hoverChangeColor() {
-        setHoverColor('#E02041');
-    }
+    function handleUpdateIncident(id) {
+        const incident =
+            incidents.find(incident =>
+                incident.id === id  
+            )
 
-    function hoverReturnColor() {
-        setHoverColor('a8a8b3');
+        history.push('/incidents/edit', { incident })
     }
 
     async function handleDeleteIncident(id) {
@@ -82,9 +83,14 @@ export default function Profile() {
                         <strong>VALUE:</strong>
                         <p>{Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(incident.value)}</p>
 
-                        <button onClick={() => handleDeleteIncident(incident.id)} type="button" onMouseOver={hoverChangeColor} onMouseOut={hoverReturnColor}>
-                            <FiTrash2 size={20} color={hoverColor} style={{ transition: "all .2s"}} />
-                        </button>
+                        <div className="actions">
+                            <button onClick={() => handleUpdateIncident(incident.id)} type="button" >
+                                <FiEdit className='icon' size={20} />
+                            </button>
+                            <button onClick={() => handleDeleteIncident(incident.id)} type="button">
+                                <FiTrash2 className='icon' size={20} />
+                            </button>
+                        </div>
                     </li>
                 ))}
             </ul>
