@@ -1,0 +1,18 @@
+{
+    "name": "BeTheHero",
+    "version": "0.0.1",
+    "description": "App made to bring together NGOs and people to volunteer and help the world!",
+    "main": "",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/MathPSantos/BeTheHero.git"
+    },
+    "keywords": [],
+    "author": "Matheus Pires Santos <matheus.psantos2016@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/MathPSantos/BeTheHero/issues"
+    },
+    "homepage": "https://github.com/MathPSantos/BeTheHero#readme",
+    "devDependencies": {}
+  }
