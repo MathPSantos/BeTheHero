@@ -30,7 +30,7 @@ After cloning this repo:
   - Run ```yarn dev``` to up the server
   - Open ```Insomnia``` or ```Postman``` and import the ```Insomnia.json``` workspace file at ```backend``` folder
 ### Frontend
-  - Run ```npm install``` in the ```website``` folder
+  - Run ```npm install``` in the ```frontend``` folder
   - Run ```npm start``` to up the project
 ### Mobile
   - Run ```npm install``` in the ```mobile``` folder
