@@ -9,18 +9,18 @@
 </p>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/MathPSantos/BeTheHero">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/MathPSantos/BeTheHero?color=red">
 
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/MathPSantos/BeTheHero?logo=typescript">
 
-  <img alt="GitHub repo size in bytes" src="https://img.shields.io/github/repo-size/MathPSantos/BeTheHero?color=blue">
+  <img alt="GitHub repo size in bytes" src="https://img.shields.io/github/repo-size/MathPSantos/BeTheHero?color=red">
 
   <br>
 
   <img alt="GitHub code size in bytes" src="https://img.shields.io/github/last-commit/MathPSantos/BeTheHero">
 
   <a href="https://www.linkedin.com/in/mathpsantos/">
-    <img alt="Made by Matheus Pires Santos" src="https://img.shields.io/badge/made%20by-MathPSantos-%2304D361">
+    <img alt="Made by Matheus Pires Santos" src="https://img.shields.io/badge/made%20by-MathPSantos-%2304D361?color=lightgrey">
   </a>
 </p>
 
