@@ -20,7 +20,7 @@
   <img alt="GitHub code size in bytes" src="https://img.shields.io/github/last-commit/MathPSantos/BeTheHero">
 
   <a href="https://www.linkedin.com/in/mathpsantos/">
-    <img alt="Made by Jerp86" src="https://img.shields.io/badge/made%20by-MathPSantos-%2304D361">
+    <img alt="Made by Matheus Pires Santos" src="https://img.shields.io/badge/made%20by-MathPSantos-%2304D361">
   </a>
 </p>
 
@@ -34,7 +34,7 @@
  
 ## :rocket: Project Summary
 
-This Project was in [Rocketseat's]() Oministack Week crash course #11, with the objective to bring together NGOs and people to volunteer and help the world!
+This Project was in [Rocketseat's](https://rocketseat.com.br/) Oministack Week crash course #11, with the objective to bring together NGOs and people to volunteer and help the world!
 
 > Made only for learning purposes.
  
