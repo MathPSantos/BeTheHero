@@ -6,8 +6,6 @@
   </p>
 
   <img src=".github/banner.png" width="1000px"/>
-
-  > This project was made for learning purposes and comes from Rocketseat's Omnistack Week crash course #11
 </p>
 
 <p align="center">
