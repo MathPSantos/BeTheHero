@@ -31,13 +31,17 @@
 - 👨‍💻️ [Technologies Used](#%EF%B8%8F-technologies-used)
 - 📦️ [How to install the project](#%EF%B8%8F-how-to-install-the-project)
 - 🤔️ [How can you contribute?](#%EF%B8%8F-how-can-you-contribute)
- 
+
+---
+
 ## :rocket: Project Summary
 
 This Project was in [Rocketseat's](https://rocketseat.com.br/) Oministack Week crash course #11, with the objective to bring together NGOs and people to volunteer and help the world!
 
 > Made only for learning purposes.
- 
+
+---
+
 ## 👨‍💻️ Technologies Used
 
 This project was developed using the technologies bellow:
@@ -121,7 +125,7 @@ To install dependencies and initialize the project, you can use **Yarn** or **NP
 
 **Using npm**
 
-*If you use NPM, delte `yarn.lock` file to see all installed dependencies in the best way.*
+*If you use NPM, delete `yarn.lock` file to see all installed dependencies in the best way.*
 
 ```bash
   # Enter backend directory
@@ -200,5 +204,5 @@ To install dependencies and initialize the project, you can use **Yarn** or **NP
 [MIT License](/LICENSE)
 
 <h4 align="center">
-  Made with ❤️ by Matheus Pires Santos <a href="mailto:matheus.psantos2016@gmail.com">Get in touch!</a>
+  Made with ❤️ by Matheus Pires Santos <a href="https://www.linkedin.com/in/mathpsantos/">Get in touch or send a email to matheus.psantos2016@gmail.com!</a>
 </h4>
